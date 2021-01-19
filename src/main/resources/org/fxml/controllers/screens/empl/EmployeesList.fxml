@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controllers.screens.empl.EmployeesListController">
+   <children>
+      <HBox prefHeight="27.0" prefWidth="602.0" spacing="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+         <children>
+            <StackPane prefHeight="26.0" prefWidth="278.0">
+               <children>
+                  <ComboBox fx:id="fioComboBox" prefHeight="25.0" prefWidth="278.0" />
+                  <TextField fx:id="fioTextField" />
+               </children>
+            </StackPane>
+            <TextField fx:id="idTextField" />
+            <Button fx:id="searchButton" mnemonicParsing="false" text="Button" />
+         </children>
+      </HBox>
+      <Pagination fx:id="pageScrollPagination" layoutX="21.0" layoutY="59.0" prefHeight="635.0" prefWidth="562.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="59.0" />
+      <Spinner fx:id="paginatorSpinner" layoutX="513.0" layoutY="554.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="20.0" />
+      <TableView fx:id="employeesTableView" fixedCellSize="27.0" layoutX="60.0" layoutY="104.0" prefHeight="295.0" prefWidth="427.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="personnelNumberColumn" maxWidth="-1.0" minWidth="113.0" prefWidth="113.0" text="Табельный номер" />
+          <TableColumn fx:id="fioColumn" maxWidth="1.7976931348623157E308" prefWidth="186.0" text="Фамилия Имя Отчество" />
+            <TableColumn fx:id="idColumn" prefWidth="71.0" text="ID Карты" />
+            <TableColumn fx:id="divisionColumn" prefWidth="104.0" text="Подразделение" />
+            <TableColumn fx:id="positionColumn" prefWidth="87.0" text="Должность" />
+        </columns>
+      </TableView>
+      <Button fx:id="startButton" layoutX="118.0" layoutY="656.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="120.0" />
+      <Button fx:id="endButton" layoutX="430.0" layoutY="656.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="120.0" />
+   </children>
+</AnchorPane>
