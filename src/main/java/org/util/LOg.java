@@ -371,10 +371,10 @@ public final class LOg {
     }
 
     private static final String generateFileName() {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        String time = simpleDateFormat.format(new Date());
-            time = time.substring(0,time.length()-1) + "0";
-        System.out.println(time);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String date = simpleDateFormat.format(new Date());
+
+        System.out.println(date);
         StringBuffer value = new StringBuffer(60);
         value.append(LOgOutputPath);
         value.append(contextName.replace(' ', '.').replace(':', '-'));
@@ -384,7 +384,7 @@ public final class LOg {
             value.append("-");
         }
 
-        value.append(time.replace(':', '_'));
+        value.append(date.replace(':', '_'));
         value.append(".text");
         return value.toString();
     }
